@@ -1,8 +1,0 @@
-source;share/romeo_tui/hook/cmake_prefix_path.ps1
-source;share/romeo_tui/hook/cmake_prefix_path.dsv
-source;share/romeo_tui/hook/cmake_prefix_path.sh
-source;share/romeo_tui/local_setup.bash
-source;share/romeo_tui/local_setup.dsv
-source;share/romeo_tui/local_setup.ps1
-source;share/romeo_tui/local_setup.sh
-source;share/romeo_tui/local_setup.zsh

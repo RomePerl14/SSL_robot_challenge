@@ -1,8 +1,0 @@
-source;share/bitchin_n_moanin/hook/cmake_prefix_path.ps1
-source;share/bitchin_n_moanin/hook/cmake_prefix_path.dsv
-source;share/bitchin_n_moanin/hook/cmake_prefix_path.sh
-source;share/bitchin_n_moanin/local_setup.bash
-source;share/bitchin_n_moanin/local_setup.dsv
-source;share/bitchin_n_moanin/local_setup.ps1
-source;share/bitchin_n_moanin/local_setup.sh
-source;share/bitchin_n_moanin/local_setup.zsh
