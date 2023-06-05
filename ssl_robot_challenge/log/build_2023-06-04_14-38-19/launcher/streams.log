@@ -1,0 +1,29 @@
+[0.778s] Invoking command in '/home/romeperl/ssl_robot_challenge/src/launcher': PYTHONPATH=/home/romeperl/ssl_robot_challenge/build/launcher/prefix_override:/home/romeperl/ssl_robot_challenge/install/launcher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/launcher build --build-base /home/romeperl/ssl_robot_challenge/build/launcher/build install --record /home/romeperl/ssl_robot_challenge/build/launcher/install.log --single-version-externally-managed
+[1.057s] running egg_info
+[1.059s] writing ../../build/launcher/launcher.egg-info/PKG-INFO
+[1.059s] writing dependency_links to ../../build/launcher/launcher.egg-info/dependency_links.txt
+[1.059s] writing entry points to ../../build/launcher/launcher.egg-info/entry_points.txt
+[1.060s] writing requirements to ../../build/launcher/launcher.egg-info/requires.txt
+[1.060s] writing top-level names to ../../build/launcher/launcher.egg-info/top_level.txt
+[1.061s] reading manifest file '../../build/launcher/launcher.egg-info/SOURCES.txt'
+[1.062s] writing manifest file '../../build/launcher/launcher.egg-info/SOURCES.txt'
+[1.062s] running build
+[1.063s] running build_py
+[1.063s] copying launcher/xacro_urdf.py -> /home/romeperl/ssl_robot_challenge/build/launcher/build/lib/launcher
+[1.064s] running install
+[1.065s] running install_lib
+[1.065s] copying /home/romeperl/ssl_robot_challenge/build/launcher/build/lib/launcher/xacro_urdf.py -> /home/romeperl/ssl_robot_challenge/install/launcher/lib/python3.10/site-packages/launcher
+[1.066s] byte-compiling /home/romeperl/ssl_robot_challenge/install/launcher/lib/python3.10/site-packages/launcher/xacro_urdf.py to xacro_urdf.cpython-310.pyc
+[1.068s]   File "/home/romeperl/ssl_robot_challenge/install/launcher/lib/python3.10/site-packages/launcher/xacro_urdf.py", line 57
+[1.068s]     parameters=[{"robot_description": Parameter(Command(['xacro', urdf_model]), value_type=str)}]
+[1.068s]                
+[1.068s] SyntaxError: invalid syntax. Perhaps you forgot a comma?
+[1.068s] 
+[1.068s] running install_data
+[1.069s] running install_egg_info
+[1.070s] removing '/home/romeperl/ssl_robot_challenge/install/launcher/lib/python3.10/site-packages/launcher-0.0.0-py3.10.egg-info' (and everything under it)
+[1.071s] Copying ../../build/launcher/launcher.egg-info to /home/romeperl/ssl_robot_challenge/install/launcher/lib/python3.10/site-packages/launcher-0.0.0-py3.10.egg-info
+[1.072s] running install_scripts
+[1.090s] Installing xacro_urdf_viewer script to /home/romeperl/ssl_robot_challenge/install/launcher/lib/launcher
+[1.091s] writing list of installed files to '/home/romeperl/ssl_robot_challenge/build/launcher/install.log'
+[1.131s] Invoked command in '/home/romeperl/ssl_robot_challenge/src/launcher' returned '0': PYTHONPATH=/home/romeperl/ssl_robot_challenge/build/launcher/prefix_override:/home/romeperl/ssl_robot_challenge/install/launcher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/launcher build --build-base /home/romeperl/ssl_robot_challenge/build/launcher/build install --record /home/romeperl/ssl_robot_challenge/build/launcher/install.log --single-version-externally-managed

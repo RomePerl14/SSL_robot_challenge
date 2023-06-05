@@ -1,0 +1,42 @@
+[0.013s] Invoking command in '/home/romeperl/ssl_robot_challenge/build/romeo_tui': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/romeperl/ssl_robot_challenge/src/romeo_tui -DCMAKE_INSTALL_PREFIX=/home/romeperl/ssl_robot_challenge/install/romeo_tui
+[0.141s] -- The C compiler identification is GNU 11.3.0
+[0.245s] -- The CXX compiler identification is GNU 11.3.0
+[0.253s] -- Detecting C compiler ABI info
+[0.368s] -- Detecting C compiler ABI info - done
+[0.379s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.380s] -- Detecting C compile features
+[0.380s] -- Detecting C compile features - done
+[0.384s] -- Detecting CXX compiler ABI info
+[0.518s] -- Detecting CXX compiler ABI info - done
+[0.526s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.526s] -- Detecting CXX compile features
+[0.527s] -- Detecting CXX compile features - done
+[0.529s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.694s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[0.780s] -- Found ament_lint_auto: 0.12.6 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.853s] -- Added test 'lint_cmake' to check CMake code style
+[0.855s] -- Added test 'xmllint' to check XML markup files
+[0.859s] -- Configuring done
+[0.863s] -- Generating done
+[0.863s] -- Build files have been written to: /home/romeperl/ssl_robot_challenge/build/romeo_tui
+[0.867s] Invoked command in '/home/romeperl/ssl_robot_challenge/build/romeo_tui' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/romeperl/ssl_robot_challenge/src/romeo_tui -DCMAKE_INSTALL_PREFIX=/home/romeperl/ssl_robot_challenge/install/romeo_tui
+[0.868s] Invoking command in '/home/romeperl/ssl_robot_challenge/build/romeo_tui': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/romeperl/ssl_robot_challenge/build/romeo_tui -- -j2 -l2
+[0.923s] Invoked command in '/home/romeperl/ssl_robot_challenge/build/romeo_tui' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/romeperl/ssl_robot_challenge/build/romeo_tui -- -j2 -l2
+[0.961s] Invoking command in '/home/romeperl/ssl_robot_challenge/build/romeo_tui': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/romeperl/ssl_robot_challenge/build/romeo_tui
+[0.977s] -- Install configuration: ""
+[0.978s] -- Installing: /home/romeperl/ssl_robot_challenge/install/romeo_tui/share/ament_index/resource_index/package_run_dependencies/romeo_tui
+[0.980s] -- Installing: /home/romeperl/ssl_robot_challenge/install/romeo_tui/share/ament_index/resource_index/parent_prefix_path/romeo_tui
+[0.982s] -- Installing: /home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/environment/ament_prefix_path.sh
+[0.982s] -- Installing: /home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/environment/ament_prefix_path.dsv
+[0.983s] -- Installing: /home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/environment/path.sh
+[0.984s] -- Installing: /home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/environment/path.dsv
+[0.986s] -- Installing: /home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/local_setup.bash
+[0.986s] -- Installing: /home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/local_setup.sh
+[0.986s] -- Installing: /home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/local_setup.zsh
+[0.987s] -- Installing: /home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/local_setup.dsv
+[0.987s] -- Installing: /home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/package.dsv
+[0.988s] -- Installing: /home/romeperl/ssl_robot_challenge/install/romeo_tui/share/ament_index/resource_index/packages/romeo_tui
+[0.988s] -- Installing: /home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/cmake/romeo_tuiConfig.cmake
+[0.988s] -- Installing: /home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/cmake/romeo_tuiConfig-version.cmake
+[0.988s] -- Installing: /home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/package.xml
+[0.993s] Invoked command in '/home/romeperl/ssl_robot_challenge/build/romeo_tui' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/romeperl/ssl_robot_challenge/build/romeo_tui

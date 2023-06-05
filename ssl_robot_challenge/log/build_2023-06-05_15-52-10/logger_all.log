@@ -1,0 +1,392 @@
+[0.237s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.237s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=2, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f9e122d5c30>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f9e122d56c0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f9e122d56c0>>)
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.255s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.255s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/romeperl/ssl_robot_challenge'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/bitchin_n_moanin) by extensions ['ignore', 'ignore_ament_install']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/bitchin_n_moanin) by extension 'ignore'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/bitchin_n_moanin) by extension 'ignore_ament_install'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/bitchin_n_moanin) by extensions ['colcon_pkg']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/bitchin_n_moanin) by extension 'colcon_pkg'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/bitchin_n_moanin) by extensions ['colcon_meta']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/bitchin_n_moanin) by extension 'colcon_meta'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/bitchin_n_moanin) by extensions ['ros']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/bitchin_n_moanin) by extension 'ros'
+[0.268s] DEBUG:colcon.colcon_core.package_identification:Package 'src/bitchin_n_moanin' with type 'ros.ament_cmake' and name 'bitchin_n_moanin'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extensions ['ignore', 'ignore_ament_install']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'ignore'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'ignore_ament_install'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extensions ['colcon_pkg']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'colcon_pkg'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extensions ['colcon_meta']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'colcon_meta'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extensions ['ros']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(src/control) by extension 'ros'
+[0.270s] DEBUG:colcon.colcon_core.package_identification:Package 'src/control' with type 'ros.ament_cmake' and name 'control'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/launcher) by extensions ['ignore', 'ignore_ament_install']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/launcher) by extension 'ignore'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/launcher) by extension 'ignore_ament_install'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/launcher) by extensions ['colcon_pkg']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/launcher) by extension 'colcon_pkg'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/launcher) by extensions ['colcon_meta']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/launcher) by extension 'colcon_meta'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/launcher) by extensions ['ros']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/launcher) by extension 'ros'
+[0.270s] DEBUG:colcon.colcon_core.package_identification:Package 'src/launcher' with type 'ros.ament_python' and name 'launcher'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot) by extensions ['ignore', 'ignore_ament_install']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot) by extension 'ignore'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot) by extension 'ignore_ament_install'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot) by extensions ['colcon_pkg']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot) by extension 'colcon_pkg'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot) by extensions ['colcon_meta']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot) by extension 'colcon_meta'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot) by extensions ['ros']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot) by extension 'ros'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot) by extensions ['cmake', 'python']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot) by extension 'cmake'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot) by extension 'python'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot) by extensions ['python_setup_py']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot) by extension 'python_setup_py'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/NOTSHAFT) by extensions ['ignore', 'ignore_ament_install']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/NOTSHAFT) by extension 'ignore'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/NOTSHAFT) by extension 'ignore_ament_install'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/NOTSHAFT) by extensions ['colcon_pkg']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/NOTSHAFT) by extension 'colcon_pkg'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/NOTSHAFT) by extensions ['colcon_meta']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/NOTSHAFT) by extension 'colcon_meta'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/NOTSHAFT) by extensions ['ros']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/NOTSHAFT) by extension 'ros'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/NOTSHAFT) by extensions ['cmake', 'python']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/NOTSHAFT) by extension 'cmake'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/NOTSHAFT) by extension 'python'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/NOTSHAFT) by extensions ['python_setup_py']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/NOTSHAFT) by extension 'python_setup_py'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT) by extensions ['ignore', 'ignore_ament_install']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT) by extension 'ignore'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT) by extension 'ignore_ament_install'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT) by extensions ['colcon_pkg']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT) by extension 'colcon_pkg'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT) by extensions ['colcon_meta']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT) by extension 'colcon_meta'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT) by extensions ['ros']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT) by extension 'ros'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT) by extensions ['cmake', 'python']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT) by extension 'cmake'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT) by extension 'python'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT) by extensions ['python_setup_py']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT) by extension 'python_setup_py'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/controls) by extensions ['ignore', 'ignore_ament_install']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/controls) by extension 'ignore'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/controls) by extension 'ignore_ament_install'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/controls) by extensions ['colcon_pkg']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/controls) by extension 'colcon_pkg'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/controls) by extensions ['colcon_meta']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/controls) by extension 'colcon_meta'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/controls) by extensions ['ros']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/controls) by extension 'ros'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/controls) by extensions ['cmake', 'python']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/controls) by extension 'cmake'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/controls) by extension 'python'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/controls) by extensions ['python_setup_py']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/controls) by extension 'python_setup_py'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/hardware) by extensions ['ignore', 'ignore_ament_install']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/hardware) by extension 'ignore'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/hardware) by extension 'ignore_ament_install'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/hardware) by extensions ['colcon_pkg']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/hardware) by extension 'colcon_pkg'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/hardware) by extensions ['colcon_meta']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/hardware) by extension 'colcon_meta'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/hardware) by extensions ['ros']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/hardware) by extension 'ros'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/hardware) by extensions ['cmake', 'python']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/hardware) by extension 'cmake'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/hardware) by extension 'python'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/hardware) by extensions ['python_setup_py']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/hardware) by extension 'python_setup_py'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/urdf) by extensions ['ignore', 'ignore_ament_install']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/urdf) by extension 'ignore'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/urdf) by extension 'ignore_ament_install'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/urdf) by extensions ['colcon_pkg']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/urdf) by extension 'colcon_pkg'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/urdf) by extensions ['colcon_meta']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/urdf) by extension 'colcon_meta'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/urdf) by extensions ['ros']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/urdf) by extension 'ros'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/urdf) by extensions ['cmake', 'python']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/urdf) by extension 'cmake'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/urdf) by extension 'python'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/urdf) by extensions ['python_setup_py']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/SSLSHAFT/urdf) by extension 'python_setup_py'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/tools) by extensions ['ignore', 'ignore_ament_install']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/tools) by extension 'ignore'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/tools) by extension 'ignore_ament_install'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/tools) by extensions ['colcon_pkg']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/tools) by extension 'colcon_pkg'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/tools) by extensions ['colcon_meta']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/tools) by extension 'colcon_meta'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/tools) by extensions ['ros']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/tools) by extension 'ros'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/tools) by extensions ['cmake', 'python']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/tools) by extension 'cmake'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/tools) by extension 'python'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/tools) by extensions ['python_setup_py']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot/tools) by extension 'python_setup_py'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/romeo_tui) by extensions ['ignore', 'ignore_ament_install']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/romeo_tui) by extension 'ignore'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/romeo_tui) by extension 'ignore_ament_install'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/romeo_tui) by extensions ['colcon_pkg']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/romeo_tui) by extension 'colcon_pkg'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/romeo_tui) by extensions ['colcon_meta']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/romeo_tui) by extension 'colcon_meta'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/romeo_tui) by extensions ['ros']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/romeo_tui) by extension 'ros'
+[0.275s] DEBUG:colcon.colcon_core.package_identification:Package 'src/romeo_tui' with type 'ros.ament_cmake' and name 'romeo_tui'
+[0.275s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.275s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.275s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.275s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.276s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.295s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.295s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.297s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/romeperl/ssl_robot_challenge/install
+[0.299s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 276 installed packages in /opt/ros/humble
+[0.300s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'bitchin_n_moanin' build argument 'cmake_args' from command line to 'None'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'bitchin_n_moanin' build argument 'cmake_target' from command line to 'None'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'bitchin_n_moanin' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'bitchin_n_moanin' build argument 'cmake_clean_cache' from command line to 'False'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'bitchin_n_moanin' build argument 'cmake_clean_first' from command line to 'False'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'bitchin_n_moanin' build argument 'cmake_force_configure' from command line to 'False'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'bitchin_n_moanin' build argument 'ament_cmake_args' from command line to 'None'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'bitchin_n_moanin' build argument 'catkin_cmake_args' from command line to 'None'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'bitchin_n_moanin' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.341s] DEBUG:colcon.colcon_core.verb:Building package 'bitchin_n_moanin' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/romeperl/ssl_robot_challenge/build/bitchin_n_moanin', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin', 'merge_install': False, 'path': '/home/romeperl/ssl_robot_challenge/src/bitchin_n_moanin', 'symlink_install': False, 'test_result_base': None}
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'launcher' build argument 'cmake_args' from command line to 'None'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'launcher' build argument 'cmake_target' from command line to 'None'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'launcher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'launcher' build argument 'cmake_clean_cache' from command line to 'False'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'launcher' build argument 'cmake_clean_first' from command line to 'False'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'launcher' build argument 'cmake_force_configure' from command line to 'False'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'launcher' build argument 'ament_cmake_args' from command line to 'None'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'launcher' build argument 'catkin_cmake_args' from command line to 'None'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'launcher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.342s] DEBUG:colcon.colcon_core.verb:Building package 'launcher' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/romeperl/ssl_robot_challenge/build/launcher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/romeperl/ssl_robot_challenge/install/launcher', 'merge_install': False, 'path': '/home/romeperl/ssl_robot_challenge/src/launcher', 'symlink_install': False, 'test_result_base': None}
+[0.343s] Level 5:colcon.colcon_core.verb:set package 'romeo_tui' build argument 'cmake_args' from command line to 'None'
+[0.343s] Level 5:colcon.colcon_core.verb:set package 'romeo_tui' build argument 'cmake_target' from command line to 'None'
+[0.343s] Level 5:colcon.colcon_core.verb:set package 'romeo_tui' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.343s] Level 5:colcon.colcon_core.verb:set package 'romeo_tui' build argument 'cmake_clean_cache' from command line to 'False'
+[0.343s] Level 5:colcon.colcon_core.verb:set package 'romeo_tui' build argument 'cmake_clean_first' from command line to 'False'
+[0.343s] Level 5:colcon.colcon_core.verb:set package 'romeo_tui' build argument 'cmake_force_configure' from command line to 'False'
+[0.343s] Level 5:colcon.colcon_core.verb:set package 'romeo_tui' build argument 'ament_cmake_args' from command line to 'None'
+[0.343s] Level 5:colcon.colcon_core.verb:set package 'romeo_tui' build argument 'catkin_cmake_args' from command line to 'None'
+[0.343s] Level 5:colcon.colcon_core.verb:set package 'romeo_tui' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.343s] DEBUG:colcon.colcon_core.verb:Building package 'romeo_tui' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/romeperl/ssl_robot_challenge/build/romeo_tui', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/romeperl/ssl_robot_challenge/install/romeo_tui', 'merge_install': False, 'path': '/home/romeperl/ssl_robot_challenge/src/romeo_tui', 'symlink_install': False, 'test_result_base': None}
+[0.344s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_args' from command line to 'None'
+[0.344s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_target' from command line to 'None'
+[0.344s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.344s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.344s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_clean_first' from command line to 'False'
+[0.344s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_force_configure' from command line to 'False'
+[0.344s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'ament_cmake_args' from command line to 'None'
+[0.344s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.344s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.344s] DEBUG:colcon.colcon_core.verb:Building package 'control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/romeperl/ssl_robot_challenge/build/control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/romeperl/ssl_robot_challenge/install/control', 'merge_install': False, 'path': '/home/romeperl/ssl_robot_challenge/src/control', 'symlink_install': False, 'test_result_base': None}
+[0.345s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.348s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.348s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/romeperl/ssl_robot_challenge/src/bitchin_n_moanin' with build type 'ament_cmake'
+[0.348s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/romeperl/ssl_robot_challenge/src/bitchin_n_moanin'
+[0.353s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.354s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.354s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.360s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/romeperl/ssl_robot_challenge/src/launcher' with build type 'ament_python'
+[0.360s] Level 1:colcon.colcon_core.shell:create_environment_hook('launcher', 'ament_prefix_path')
+[0.361s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/romeperl/ssl_robot_challenge/install/launcher/share/launcher/hook/ament_prefix_path.ps1'
+[0.362s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/romeperl/ssl_robot_challenge/install/launcher/share/launcher/hook/ament_prefix_path.dsv'
+[0.363s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/romeperl/ssl_robot_challenge/install/launcher/share/launcher/hook/ament_prefix_path.sh'
+[0.365s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.365s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.399s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/romeperl/ssl_robot_challenge/build/bitchin_n_moanin': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/romeperl/ssl_robot_challenge/install/launcher:/opt/ros/humble /usr/bin/cmake --build /home/romeperl/ssl_robot_challenge/build/bitchin_n_moanin -- -j2 -l2
+[0.601s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/romeperl/ssl_robot_challenge/src/launcher'
+[0.603s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.603s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.621s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/romeperl/ssl_robot_challenge/build/bitchin_n_moanin' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/romeperl/ssl_robot_challenge/install/launcher:/opt/ros/humble /usr/bin/cmake --build /home/romeperl/ssl_robot_challenge/build/bitchin_n_moanin -- -j2 -l2
+[0.668s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/romeperl/ssl_robot_challenge/build/bitchin_n_moanin': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/romeperl/ssl_robot_challenge/install/launcher:/opt/ros/humble /usr/bin/cmake --install /home/romeperl/ssl_robot_challenge/build/bitchin_n_moanin
+[0.689s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bitchin_n_moanin)
+[0.694s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin' for CMake module files
+[0.690s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/romeperl/ssl_robot_challenge/build/bitchin_n_moanin' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/romeperl/ssl_robot_challenge/install/launcher:/opt/ros/humble /usr/bin/cmake --install /home/romeperl/ssl_robot_challenge/build/bitchin_n_moanin
+[0.694s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin' for CMake config files
+[0.694s] Level 1:colcon.colcon_core.shell:create_environment_hook('bitchin_n_moanin', 'cmake_prefix_path')
+[0.695s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/share/bitchin_n_moanin/hook/cmake_prefix_path.ps1'
+[0.696s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/share/bitchin_n_moanin/hook/cmake_prefix_path.dsv'
+[0.697s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/share/bitchin_n_moanin/hook/cmake_prefix_path.sh'
+[0.699s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/bin'
+[0.699s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/lib/pkgconfig/bitchin_n_moanin.pc'
+[0.699s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/lib/python3.10/site-packages'
+[0.699s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/bin'
+[0.700s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/share/bitchin_n_moanin/package.ps1'
+[0.702s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/share/bitchin_n_moanin/package.dsv'
+[0.703s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/share/bitchin_n_moanin/package.sh'
+[0.704s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/share/bitchin_n_moanin/package.bash'
+[0.705s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/share/bitchin_n_moanin/package.zsh'
+[0.706s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/share/colcon-core/packages/bitchin_n_moanin)
+[0.731s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bitchin_n_moanin)
+[0.732s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin' for CMake module files
+[0.733s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin' for CMake config files
+[0.733s] Level 1:colcon.colcon_core.shell:create_environment_hook('bitchin_n_moanin', 'cmake_prefix_path')
+[0.734s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/share/bitchin_n_moanin/hook/cmake_prefix_path.ps1'
+[0.735s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/share/bitchin_n_moanin/hook/cmake_prefix_path.dsv'
+[0.736s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/share/bitchin_n_moanin/hook/cmake_prefix_path.sh'
+[0.737s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/bin'
+[0.738s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/lib/pkgconfig/bitchin_n_moanin.pc'
+[0.738s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/lib/python3.10/site-packages'
+[0.738s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/bin'
+[0.739s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/share/bitchin_n_moanin/package.ps1'
+[0.740s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/share/bitchin_n_moanin/package.dsv'
+[0.741s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/share/bitchin_n_moanin/package.sh'
+[0.742s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/share/bitchin_n_moanin/package.bash'
+[0.742s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/share/bitchin_n_moanin/package.zsh'
+[0.743s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin/share/colcon-core/packages/bitchin_n_moanin)
+[0.745s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/romeperl/ssl_robot_challenge/src/romeo_tui' with build type 'ament_cmake'
+[0.745s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/romeperl/ssl_robot_challenge/src/romeo_tui'
+[0.746s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.747s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.764s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/romeperl/ssl_robot_challenge/build/romeo_tui': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/romeperl/ssl_robot_challenge/install/launcher:/opt/ros/humble /usr/bin/cmake --build /home/romeperl/ssl_robot_challenge/build/romeo_tui -- -j2 -l2
+[0.822s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/romeperl/ssl_robot_challenge/build/romeo_tui' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/romeperl/ssl_robot_challenge/install/launcher:/opt/ros/humble /usr/bin/cmake --build /home/romeperl/ssl_robot_challenge/build/romeo_tui -- -j2 -l2
+[0.901s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/romeperl/ssl_robot_challenge/build/romeo_tui': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/romeperl/ssl_robot_challenge/install/launcher:/opt/ros/humble /usr/bin/cmake --install /home/romeperl/ssl_robot_challenge/build/romeo_tui
+[0.930s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(romeo_tui)
+[0.932s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/romeo_tui' for CMake module files
+[0.933s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/romeo_tui' for CMake config files
+[0.933s] Level 1:colcon.colcon_core.shell:create_environment_hook('romeo_tui', 'cmake_prefix_path')
+[0.934s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/hook/cmake_prefix_path.ps1'
+[0.935s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/hook/cmake_prefix_path.dsv'
+[0.936s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/romeperl/ssl_robot_challenge/build/romeo_tui' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/romeperl/ssl_robot_challenge/install/launcher:/opt/ros/humble /usr/bin/cmake --install /home/romeperl/ssl_robot_challenge/build/romeo_tui
+[0.937s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/hook/cmake_prefix_path.sh'
+[0.938s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/romeo_tui/bin'
+[0.938s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/romeo_tui/lib/pkgconfig/romeo_tui.pc'
+[0.939s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/romeo_tui/lib/python3.10/site-packages'
+[0.939s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/romeo_tui/bin'
+[0.940s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/package.ps1'
+[0.941s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/package.dsv'
+[0.942s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/package.sh'
+[0.943s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/package.bash'
+[0.944s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/package.zsh'
+[0.944s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/romeperl/ssl_robot_challenge/install/romeo_tui/share/colcon-core/packages/romeo_tui)
+[0.972s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(romeo_tui)
+[0.975s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/romeo_tui' for CMake module files
+[0.980s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/romeo_tui' for CMake config files
+[0.980s] Level 1:colcon.colcon_core.shell:create_environment_hook('romeo_tui', 'cmake_prefix_path')
+[0.982s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/hook/cmake_prefix_path.ps1'
+[0.984s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/hook/cmake_prefix_path.dsv'
+[0.994s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/hook/cmake_prefix_path.sh'
+[0.996s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/romeo_tui/bin'
+[0.998s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/romeo_tui/lib/pkgconfig/romeo_tui.pc'
+[0.998s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/romeo_tui/lib/python3.10/site-packages'
+[0.998s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/romeo_tui/bin'
+[1.000s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/package.ps1'
+[1.001s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/package.dsv'
+[1.002s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/package.sh'
+[1.009s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/package.bash'
+[1.010s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/romeo_tui/share/romeo_tui/package.zsh'
+[1.010s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/romeperl/ssl_robot_challenge/install/romeo_tui/share/colcon-core/packages/romeo_tui)
+[1.012s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/romeperl/ssl_robot_challenge/src/control' with build type 'ament_cmake'
+[1.013s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/romeperl/ssl_robot_challenge/src/control'
+[1.014s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.014s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.054s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/romeperl/ssl_robot_challenge/build/control': AMENT_PREFIX_PATH=/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin:/home/romeperl/ssl_robot_challenge/install/romeo_tui:/home/romeperl/ssl_robot_challenge/install/robot:/home/romeperl/ssl_robot_challenge/install/control:/home/romeperl/ssl_robot_challenge/install/launcher:/opt/ros/humble /usr/bin/cmake --build /home/romeperl/ssl_robot_challenge/build/control -- -j2 -l2
+[1.116s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/romeperl/ssl_robot_challenge/src/launcher': PYTHONPATH=/home/romeperl/ssl_robot_challenge/build/launcher/prefix_override:/home/romeperl/ssl_robot_challenge/install/launcher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/launcher build --build-base /home/romeperl/ssl_robot_challenge/build/launcher/build install --record /home/romeperl/ssl_robot_challenge/build/launcher/install.log --single-version-externally-managed
+[1.415s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/launcher' for CMake module files
+[1.416s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/romeperl/ssl_robot_challenge/src/launcher' returned '0': PYTHONPATH=/home/romeperl/ssl_robot_challenge/build/launcher/prefix_override:/home/romeperl/ssl_robot_challenge/install/launcher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/launcher build --build-base /home/romeperl/ssl_robot_challenge/build/launcher/build install --record /home/romeperl/ssl_robot_challenge/build/launcher/install.log --single-version-externally-managed
+[1.417s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/launcher' for CMake config files
+[1.417s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/launcher/lib'
+[1.418s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/launcher/bin'
+[1.418s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/launcher/lib/pkgconfig/launcher.pc'
+[1.418s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/launcher/lib/python3.10/site-packages'
+[1.418s] Level 1:colcon.colcon_core.shell:create_environment_hook('launcher', 'pythonpath')
+[1.420s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/romeperl/ssl_robot_challenge/install/launcher/share/launcher/hook/pythonpath.ps1'
+[1.422s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/romeperl/ssl_robot_challenge/install/launcher/share/launcher/hook/pythonpath.dsv'
+[1.423s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/romeperl/ssl_robot_challenge/install/launcher/share/launcher/hook/pythonpath.sh'
+[1.432s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/launcher/bin'
+[1.432s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(launcher)
+[1.434s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/launcher/share/launcher/package.ps1'
+[1.437s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/romeperl/ssl_robot_challenge/install/launcher/share/launcher/package.dsv'
+[1.439s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/launcher/share/launcher/package.sh'
+[1.442s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/launcher/share/launcher/package.bash'
+[1.442s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/launcher/share/launcher/package.zsh'
+[1.445s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/romeperl/ssl_robot_challenge/install/launcher/share/colcon-core/packages/launcher)
+[1.757s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/romeperl/ssl_robot_challenge/build/control' returned '2': AMENT_PREFIX_PATH=/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/romeperl/ssl_robot_challenge/install/bitchin_n_moanin:/home/romeperl/ssl_robot_challenge/install/romeo_tui:/home/romeperl/ssl_robot_challenge/install/robot:/home/romeperl/ssl_robot_challenge/install/control:/home/romeperl/ssl_robot_challenge/install/launcher:/opt/ros/humble /usr/bin/cmake --build /home/romeperl/ssl_robot_challenge/build/control -- -j2 -l2
+[1.790s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(control)
+[1.791s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/control' for CMake module files
+[1.792s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/control' for CMake config files
+[1.792s] Level 1:colcon.colcon_core.shell:create_environment_hook('control', 'cmake_prefix_path')
+[1.793s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/romeperl/ssl_robot_challenge/install/control/share/control/hook/cmake_prefix_path.ps1'
+[1.794s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/romeperl/ssl_robot_challenge/install/control/share/control/hook/cmake_prefix_path.dsv'
+[1.795s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/romeperl/ssl_robot_challenge/install/control/share/control/hook/cmake_prefix_path.sh'
+[1.796s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/control/bin'
+[1.796s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/control/lib/pkgconfig/control.pc'
+[1.796s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/control/lib/python3.10/site-packages'
+[1.796s] Level 1:colcon.colcon_core.environment:checking '/home/romeperl/ssl_robot_challenge/install/control/bin'
+[1.797s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/control/share/control/package.ps1'
+[1.798s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/romeperl/ssl_robot_challenge/install/control/share/control/package.dsv'
+[1.800s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/control/share/control/package.sh'
+[1.801s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/control/share/control/package.bash'
+[1.801s] INFO:colcon.colcon_core.shell:Creating package script '/home/romeperl/ssl_robot_challenge/install/control/share/control/package.zsh'
+[1.802s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/romeperl/ssl_robot_challenge/install/control/share/colcon-core/packages/control)
+[1.813s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.813s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.813s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[1.814s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.819s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.819s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.819s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.832s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.833s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/romeperl/ssl_robot_challenge/install/local_setup.ps1'
+[1.834s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/romeperl/ssl_robot_challenge/install/_local_setup_util_ps1.py'
+[1.836s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/romeperl/ssl_robot_challenge/install/setup.ps1'
+[1.838s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/romeperl/ssl_robot_challenge/install/local_setup.sh'
+[1.838s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/romeperl/ssl_robot_challenge/install/_local_setup_util_sh.py'
+[1.840s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/romeperl/ssl_robot_challenge/install/setup.sh'
+[1.842s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/romeperl/ssl_robot_challenge/install/local_setup.bash'
+[1.843s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/romeperl/ssl_robot_challenge/install/setup.bash'
+[1.845s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/romeperl/ssl_robot_challenge/install/local_setup.zsh'
+[1.846s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/romeperl/ssl_robot_challenge/install/setup.zsh'

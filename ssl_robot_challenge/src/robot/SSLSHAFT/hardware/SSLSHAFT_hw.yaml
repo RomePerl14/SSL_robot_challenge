@@ -1,0 +1,83 @@
+robot_name: SSLSHAFT
+
+SSLSHAFT:
+
+  num_limbs: 2
+  update_rate: 60 #in Hz
+
+
+  limbs:
+  -
+    name: left_arm
+    num_joints: 4
+    num_tooldrives: 1
+    default_control_mode: "velocity"
+    use_gazebo: false
+  -
+    limb_name: right_arm
+    num_joints: 4
+    num_tooldrives: 1
+    default_control_mode: "velocity"
+    use_gazebo: false
+
+  joints:
+  -
+    name: "should_roll_L"
+    joint_direction: 1
+    id: 1
+    home: 0.0
+    limb: "left_arm"
+  -
+    name: "should_pitch_L"
+    joint_direction: 1
+    id: 2
+    home: 0.0
+  -
+    name: "elbow_pitch_L"
+    joint_direction: 1
+    id: 3
+    home: 0.0
+    limb: "left_arm"
+  -
+    name: "wrist_roll_L"
+    joint_direction: 1
+    id: 4
+    home: 0.0
+    limb: "left_arm"
+  -
+    name: "should_roll_R"
+    joint_direction: -1
+    id: 1
+    home: 0.0
+    limb: "right_arm"
+  -
+    name: "should_pitch_R"
+    joint_direction: -1
+    id: 2
+    home: 0.0
+    limb: "right_arm"
+  -
+    name: "elbow_pitch_R"
+    joint_direction: -1
+    id: 3
+    home: 0.0
+    limb: "right_arm"
+  -
+    name: "wrist_roll_R"
+    joint_direction: -1
+    id: 4
+    home: 0.0
+    limb: "right_arm"
+  tooldrives:
+  -
+    name: "left_tooldrive1"
+    joint_direction: 1
+    id: 5
+    home: 0.0
+    limb: "left_arm"
+  -
+    name: "right_tooldrive1"
+    joint_direction: 1
+    id: 5
+    home: 0.0
+    limb: "right_arm"

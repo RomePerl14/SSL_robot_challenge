@@ -1,0 +1,24 @@
+[0.704s] Invoking command in '/home/romeperl/ssl_robot_challenge/src/launcher': PYTHONPATH=/home/romeperl/ssl_robot_challenge/build/launcher/prefix_override:/home/romeperl/ssl_robot_challenge/install/launcher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/launcher build --build-base /home/romeperl/ssl_robot_challenge/build/launcher/build install --record /home/romeperl/ssl_robot_challenge/build/launcher/install.log --single-version-externally-managed
+[0.911s] running egg_info
+[0.911s] writing ../../build/launcher/launcher.egg-info/PKG-INFO
+[0.911s] writing dependency_links to ../../build/launcher/launcher.egg-info/dependency_links.txt
+[0.911s] writing entry points to ../../build/launcher/launcher.egg-info/entry_points.txt
+[0.911s] writing requirements to ../../build/launcher/launcher.egg-info/requires.txt
+[0.911s] writing top-level names to ../../build/launcher/launcher.egg-info/top_level.txt
+[0.918s] reading manifest file '../../build/launcher/launcher.egg-info/SOURCES.txt'
+[0.926s] writing manifest file '../../build/launcher/launcher.egg-info/SOURCES.txt'
+[0.928s] running build
+[0.928s] running build_py
+[0.929s] copying launcher/xacro_urdf.py -> /home/romeperl/ssl_robot_challenge/build/launcher/build/lib/launcher
+[0.929s] running install
+[0.930s] running install_lib
+[0.931s] copying /home/romeperl/ssl_robot_challenge/build/launcher/build/lib/launcher/xacro_urdf.py -> /home/romeperl/ssl_robot_challenge/install/launcher/lib/python3.10/site-packages/launcher
+[0.931s] byte-compiling /home/romeperl/ssl_robot_challenge/install/launcher/lib/python3.10/site-packages/launcher/xacro_urdf.py to xacro_urdf.cpython-310.pyc
+[0.933s] running install_data
+[0.933s] running install_egg_info
+[0.935s] removing '/home/romeperl/ssl_robot_challenge/install/launcher/lib/python3.10/site-packages/launcher-0.0.0-py3.10.egg-info' (and everything under it)
+[0.936s] Copying ../../build/launcher/launcher.egg-info to /home/romeperl/ssl_robot_challenge/install/launcher/lib/python3.10/site-packages/launcher-0.0.0-py3.10.egg-info
+[0.936s] running install_scripts
+[0.953s] Installing xacro_urdf_viewer script to /home/romeperl/ssl_robot_challenge/install/launcher/lib/launcher
+[0.954s] writing list of installed files to '/home/romeperl/ssl_robot_challenge/build/launcher/install.log'
+[0.986s] Invoked command in '/home/romeperl/ssl_robot_challenge/src/launcher' returned '0': PYTHONPATH=/home/romeperl/ssl_robot_challenge/build/launcher/prefix_override:/home/romeperl/ssl_robot_challenge/install/launcher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/launcher build --build-base /home/romeperl/ssl_robot_challenge/build/launcher/build install --record /home/romeperl/ssl_robot_challenge/build/launcher/install.log --single-version-externally-managed

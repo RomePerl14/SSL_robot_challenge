@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="SSLSHAFT">
+
+    <xacro:property name="arm_stand" value="0.5 0.5 1"/>
+    
+    <!-- arm properties -->
+    <xacro:property name="shoulder_base_radius" value="0.175"/>
+    <xacro:property name="link_radius" value="0.15"/>
+    <xacro:property name="shoulder_roll_base" value="0.15"/>
+    <xacro:property name="shoulder_roll_extrude" value="0.35"/>
+    <xacro:property name="shoulder_pitch_length" value="0.5"/>
+    <xacro:property name="shoulder_pitch_extrude" value="0.35"/>
+    <xacro:property name="elbow_pitch_length" value="0.6"/>
+    <xacro:property name="wrist_roll_size" value="0.2 0.2 0.2"/>
+
+    <link name="base_link"></link>
+
+    <link name="arm_stand">
+        <origin xyz="0 0 0.5"/>
+        <visual>
+            <geometry>
+                <box size="${arm_stand}"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="${arm_stand}"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="arm_stand" type="fixed">
+        <parent link="base_link"/>
+        <child link="arm_stand"/>
+        <origin xyz="0 0 0.5" rpy="0 0 0"/>
+        <axis xyz="0.0 0.0 0.0"/>
+    </joint>
+
+    <link name="shoulder_roll_L">
+        <visual>
+            <origin xyz="0 0 -0.15"/>
+            <geometry>
+                <cylinder radius="${shoulder_base_radius}" length="${shoulder_roll_base}"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 -0.15"/>
+            <geometry>
+                <cylinder radius="${shoulder_base_radius}" length="${shoulder_roll_base}"/>
+            </geometry>
+        </collision>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0.0 1.5708 0.0"/>
+            <geometry>
+                <cylinder radius="${link_radius}" length="${shoulder_roll_extrude}"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0.0 1.5708 0.0"/>
+            <geometry>
+                <cylinder radius="${link_radius}" length="${shoulder_roll_extrude}"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="shoulder_roll_L" type="revolute">
+        <parent link="arm_stand"/>
+        <child link="shoulder_roll_L"/>
+        <origin xyz="0 ${.25+.15+.075} .25" rpy="-1.5708 0 0"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-6.0" upper="6.0" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <link name="shoulder_pitch_L">
+        <visual>
+            <origin xyz="-.25 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+            <geometry>
+                <cylinder radius="${link_radius}" length="${shoulder_pitch_length}"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="-.25 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+            <geometry>
+                <cylinder radius="${link_radius}" length="${shoulder_pitch_length}"/>
+            </geometry>
+        </collision>
+
+        <visual>
+            <origin xyz="${-.15-.35} 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="${link_radius}" length="${shoulder_pitch_extrude}"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="${-.15-.35} 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="${link_radius}" length="${shoulder_pitch_extrude}"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="shoulder_pitch_L" type="revolute">
+        <parent link="shoulder_roll_L"/>
+        <child link="shoulder_pitch_L"/>
+        <origin xyz="0 0 0" rpy="0 1.5708 0"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-6.0" upper="6.0" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <link name="elbow_pitch_L">
+        <visual>
+            <origin xyz="-.3 0.0 0.0" rpy="0.0 -1.5708 0.0"/>
+            <geometry>
+                <cylinder radius="${link_radius}" length="${elbow_pitch_length}"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="-.3 0.0 0.0" rpy="0.0 -1.5708 0.0"/>
+            <geometry>
+                <cylinder radius="${link_radius}" length="${elbow_pitch_length}"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="elbow_pitch_L" type="revolute">
+        <parent link="shoulder_pitch_L"/>
+        <child link="elbow_pitch_L"/>
+        <origin xyz="-0.5 0.0 0.0"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-6.0" upper="6.0" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <link name="wrist_roll_L">
+        <visual>
+            <origin xyz="0.0 0.0 0.1" rpy="0.0 -1.5708 0.0"/>
+            <geometry>
+                <box size="0.2 0.2 0.2"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.1" rpy="0.0 -1.5708 0.0"/>
+            <geometry>
+                <box size="0.2 0.2 0.2"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="wrist_roll_L" type="continuous">
+        <origin xyz="-0.6 0.0 0.0" rpy="0.0 -1.5708 0.0"/>
+        <parent link="elbow_pitch_L"/>
+        <child link="wrist_roll_L"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit effort="0.0" velocity="0.0"/>
+    </joint>
+
+
+    <!-- Right Arm -->
+    <link name="shoulder_roll_R">
+        <visual>
+            <origin xyz="0 0 -0.15"/>
+            <geometry>
+                <cylinder radius="${shoulder_base_radius}" length="${shoulder_roll_base}"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 -0.15"/>
+            <geometry>
+                <cylinder radius="${shoulder_base_radius}" length="${shoulder_roll_base}"/>
+            </geometry>
+        </collision>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0.0 -1.5708 0.0"/>
+            <geometry>
+                <cylinder radius="${link_radius}" length="${shoulder_roll_extrude}"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0.0 -1.5708 0.0"/>
+            <geometry>
+                <cylinder radius="${link_radius}" length="${shoulder_roll_extrude}"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="shoulder_roll_R" type="revolute">
+        <parent link="arm_stand"/>
+        <child link="shoulder_roll_R"/>
+        <origin xyz="0 ${-0.25-0.15-0.075} 0.25" rpy="1.5708 0 0"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-6.0" upper="6.0" effort="0.0" velocity="0.0"/>
+    </joint>
+    
+    <link name="shoulder_pitch_R">
+        <visual>
+            <origin xyz="0.25 0.0 0.0" rpy="0.0 -1.5708 0.0"/>
+            <geometry>
+                <cylinder radius="${link_radius}" length="${shoulder_pitch_length}"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0.25 0.0 0.0" rpy="0.0 -1.5708 0.0"/>
+            <geometry>
+                <cylinder radius="${link_radius}" length="${shoulder_pitch_length}"/>
+            </geometry>
+        </collision>
+
+        <visual>
+            <origin xyz="${0.15+0.35} 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="${link_radius}" length="${shoulder_pitch_extrude}"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="${0.15+0.35} 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="${link_radius}" length="${shoulder_pitch_extrude}"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="shoulder_pitch_R" type="revolute">
+        <parent link="shoulder_roll_R"/>
+        <child link="shoulder_pitch_R"/>
+        <origin xyz="0 0 0" rpy="0 -1.5708 0"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-6.0" upper="6.0" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <link name="elbow_pitch_R">
+        <visual>
+            <origin xyz=".3 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+            <geometry>
+                <cylinder radius="${link_radius}" length="${elbow_pitch_length}"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz=".3 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+            <geometry>
+                <cylinder radius="${link_radius}" length="${elbow_pitch_length}"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="elbow_pitch_R" type="revolute">
+        <parent link="shoulder_pitch_R"/>
+        <child link="elbow_pitch_R"/>
+        <origin xyz="0.5 0.0 0.0"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-6.0" upper="6.0" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <link name="wrist_roll_R">
+        <visual>
+            <origin xyz="0.0 0.0 0.1" rpy="0.0 1.5708 0.0"/>
+            <geometry>
+                <box size="0.2 0.2 0.2"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.1" rpy="0.0 1.5708 0.0"/>
+            <geometry>
+                <box size="0.2 0.2 0.2"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="wrist_roll_R" type="continuous">
+        <origin xyz="0.6 0.0 0.0" rpy="0.0 1.5708 0.0"/>
+        <parent link="elbow_pitch_R"/>
+        <child link="wrist_roll_R"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit effort="0.0" velocity="0.0"/>
+    </joint>
+
+
+
+    <!-- tool drives -->
+    <link name="left_tooldrive1">
+        <visual>
+            <origin xyz="-0.1 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.2 0.1 0.05"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="-0.1 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.2 0.1 0.05"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="left_tooldrive1" type="prismatic">
+        <origin xyz="-0.1 0.0 0.2" rpy="0.0 1.5708 0.0"/>
+        <parent link="wrist_roll_L"/>
+        <child link="left_tooldrive1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="0.075" upper="0.0" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <link name="left_tooldrive2">
+        <visual>
+            <origin xyz="0.1 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.2 0.1 0.05"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0.1 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.2 0.1 0.05"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="left_tooldrive2" type="prismatic">
+        <origin xyz="0.1 0.0 0.2" rpy="0.0 -1.5708 0.0"/>
+        <parent link="wrist_roll_L"/>
+        <child link="left_tooldrive2"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="0.075" upper="0.0" effort="0.0" velocity="0.0"/>
+        <mimic joint="left_tooldrive1" multiplier="1.0"/>
+    </joint>
+
+    <link name="right_tooldrive1">
+        <visual>
+            <origin xyz="-0.1 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.2 0.1 0.05"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="-0.1 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.2 0.1 0.05"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="right_tooldrive1" type="prismatic">
+        <origin xyz="-0.1 0.0 0.2" rpy="0.0 1.5708 0.0"/>
+        <parent link="wrist_roll_R"/>
+        <child link="right_tooldrive1"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="0.075" upper="0.0" effort="0.0" velocity="0.0"/>
+    </joint>
+
+    <link name="right_tooldrive2">
+        <visual>
+            <origin xyz="0.1 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.2 0.1 0.05"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0.1 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.2 0.1 0.05"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="right_tooldrive2" type="prismatic">
+        <origin xyz="0.1 0.0 0.2" rpy="0.0 -1.5708 0.0"/>
+        <parent link="wrist_roll_R"/>
+        <child link="right_tooldrive2"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="0.075" upper="0.0" effort="0.0" velocity="0.0"/>
+        <mimic joint="right_tooldrive1" multiplier="1.0"/>
+    </joint>
+
+</robot>
