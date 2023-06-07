@@ -1,0 +1,1517 @@
+<?xml version="1.0"?>
+
+<robot name="exoskeleton">
+
+  <!-- base_link_ScapulaMount -->
+  <!-- This is the very base of the Exoskeleton, which includes the base mount, and the first motor. However, NOT the first defined joint for the URDF, just the models -->
+  <link name="base_link">
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/base_link-ScapulaMount/FD22-0036.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/base_link-ScapulaMount/FD22-0036.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/base_link-ScapulaMount/FD22-0036_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/base_link-ScapulaMount/FD22-0036_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/base_link-ScapulaMount/FD22-0044.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/base_link-ScapulaMount/FD22-0044.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/base_link-ScapulaMount/FD22-0024.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/base_link-ScapulaMount/FD22-0024.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/base_link-ScapulaMount/FD22-0018.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/base_link-ScapulaMount/FD22-0018.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/base_link-ScapulaMount/FD22-0016.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/base_link-ScapulaMount/FD22-0016.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/base_link-ScapulaMount/Encoder.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/base_link-ScapulaMount/Encoder.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+
+  <!-- link1_FD22-0043  -->
+  <!-- This is the bar that connects joint1 to the "T" section that connects to the rest of the exoskeleton. This IS where joint1 is defined -->
+  <link name="joint1">
+    
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link1-FD22-0043/FD22-0043.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link1-FD22-0043/FD22-0043.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+  </link>
+  <!-- joint1 -->
+  <joint name="joint1" type="revolute">
+    <parent link="base_link"/>
+    <child link="joint1"/>
+    <origin xyz="0 0 0" rpy="-1.5708 0 0"/>
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" lower="-.523599" upper="0" velocity="0.0"/>
+    <safety_controller k_velocity="1" k_position="1"
+      soft_lower_limit="-3" soft_upper_limit="3" />
+  </joint>
+
+
+  <!-- link2_FD22-0042  -->
+  <!-- This is the top adjustable shoulder bar on exoskeleton, including the first passive "joint", LS_passive -->
+  <link name="LS_passive">
+
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://meshes/link2-FD22-0042/FD22-0041.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://meshes/link2-FD22-0042/FD22-0041.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://meshes/link2-FD22-0042/FD22-0042.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="package://meshes/link2-FD22-0042/FD22-0042.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+  </link>
+  <!-- LS_passive -->
+  <joint name="LS_passive" type="fixed">
+    <parent link="joint1"/>
+    <child link="LS_passive"/>
+    <origin xyz="0 0 0" rpy="0 0 -1.0472"/>
+    <axis xyz="0 1 0" />
+    <limit effort="1000.0" lower="0" upper=".075391" velocity="0.0"/>
+  </joint>
+
+
+  <!-- joint2_transform_link -->
+  <!-- This is (I believe) a special thing that Natalie thought of so joint2 on exoskeleton would move correctly, which in my opinion, is very poggers  -->
+  <link name="joint2_transform">
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder length="0.001" radius="0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder length="0.001" radius="0.001"/>
+      </geometry>
+    </collision>
+
+  </link>
+  <!-- joint2_transform -->
+  <joint name="joint2_transform" type="fixed">
+    <parent link="LS_passive"/>
+    <child link="joint2_transform"/>
+    <origin xyz="0 0 0" rpy="1.5708 0 1.0472"/>
+  </joint>
+
+
+  <!-- link3_FD22-0040  -->
+  <!-- This is the ACTUAL joint2, including all of it's models, like it's motors -->
+  <link name="joint2">
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link3-FD22-0040/FD22-0040.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link3-FD22-0040/FD22-0040.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link3-FD22-0040/FD22-0024.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link3-FD22-0040/FD22-0024.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link3-FD22-0040/FD22-0018.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link3-FD22-0040/FD22-0018.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link3-FD22-0040/FD22-0016.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link3-FD22-0040/FD22-0016.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link3-FD22-0040/Encoder.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link3-FD22-0040/Encoder.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+  </link>
+  <!-- joint2 -->
+  <joint name="joint2" type="revolute">
+    <parent link="joint2_transform"/>
+    <child link="joint2"/>
+    <origin xyz="-.177227 0 .116622" rpy="0 0 0"/>
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" lower="-.261799" upper="2.35619" velocity="0.0"/>
+    <safety_controller k_velocity="1" k_position="1"
+      soft_lower_limit="-3" soft_upper_limit="3" />
+  </joint>
+
+
+  <!-- link4_FD22-0039  -->
+  <!-- This is joint3, including all of it's models like the motors and such -->
+  <link name="joint3">
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link4_FD22-0039/FD22-0039.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link4_FD22-0039/FD22-0039.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link4_FD22-0039/FD22-0024.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link4_FD22-0039/FD22-0024.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link4_FD22-0039/FD22-0018.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link4_FD22-0039/FD22-0018.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link4_FD22-0039/FD22-0016.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link4_FD22-0039/FD22-0016.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link4_FD22-0039/Encoder.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link4_FD22-0039/Encoder.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+  </link>
+  <!-- joint3 -->
+  <joint name="joint3" type="revolute">
+    <parent link="joint2"/>
+    <child link="joint3"/>
+    <origin xyz="0 0 0" rpy="-1.5708 0 0"/>
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" lower="-2.35619" upper="2.35619" velocity="0.0"/>
+    <safety_controller k_velocity="1" k_position="1"
+      soft_lower_limit="-3" soft_upper_limit="3" />
+  </joint>
+
+
+  <!-- link5_FD22-0038  -->
+  <!-- This is joint 4, which is rather simple aint it -->
+  <link name="joint4">
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link5_FD22-0038/FD22-0038.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link5_FD22-0038/FD22-0038.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+  </link>
+  <!-- joint4 -->
+  <joint name="joint4" type="revolute">
+    <parent link="joint3"/>
+    <child link="joint4"/>
+    <origin xyz="0 -.4279863 0" rpy="1.5708 3.14159 0"/>
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" lower="-2.0944" upper="3.14159" velocity="0.0"/>
+    <safety_controller k_velocity="1" k_position="1"
+      soft_lower_limit="-3" soft_upper_limit="3" />
+  </joint>
+
+
+  <!-- LU_transform_link -->
+  <!-- I believe this is another object that lets exoskeleton move the corret way, or it is one of the transform links -->
+  <link name="LU_transform">
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder length="0.001" radius="0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder length="0.001" radius="0.001"/>
+      </geometry>
+    </collision>
+
+  </link>
+  <!-- LU_transform -->
+  <joint name="LU_transform" type="fixed">
+    <parent link="joint4"/>
+    <child link="LU_transform"/>
+    <origin xyz="0 0 0" rpy=".785398 0 0"/>
+  </joint>
+
+
+  <!-- link6_FD22-0021  -->
+  <!-- This is the LU_passive link, holding all of the stls to make it look correct and such -->
+  <link name="LU_passive">
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 3.14159 0" />
+      <geometry>
+        <mesh filename="package://meshes/link6_FD22-0021/FD22-0021.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 3.14159 0" />
+      <geometry>
+        <mesh filename="package://meshes/link6_FD22-0021/FD22-0021.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 3.14159 0" />
+      <geometry>
+        <mesh filename="package://meshes/link6_FD22-0021/JR3-67M25-I40-DH.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 3.14159 0" />
+      <geometry>
+        <mesh filename="package://meshes/link6_FD22-0021/JR3-67M25-I40-DH.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 3.14159 0" />
+      <geometry>
+        <mesh filename="package://meshes/link6_FD22-0021/FD22-0024.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 3.14159 0" />
+      <geometry>
+        <mesh filename="package://meshes/link6_FD22-0021/FD22-0024.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 3.14159 0" />
+      <geometry>
+        <mesh filename="package://meshes/link6_FD22-0021/FD22-0010.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 3.14159 0" />
+      <geometry>
+        <mesh filename="package://meshes/link6_FD22-0021/FD22-0010.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 3.14159 0" />
+      <geometry>
+        <mesh filename="package://meshes/link6_FD22-0021/FD22-0009.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 3.14159 0" />
+      <geometry>
+        <mesh filename="package://meshes/link6_FD22-0021/FD22-0009.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 3.14159 0" />
+      <geometry>
+        <mesh filename="package://meshes/link6_FD22-0021/Encoder.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 3.14159 0" />
+      <geometry>
+        <mesh filename="package://meshes/link6_FD22-0021/Encoder.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+  </link>
+  <!-- LU_passive -->
+  <joint name="LU_passive" type="fixed">
+    <parent link="LU_transform"/>
+    <child link="LU_passive"/>
+    <origin xyz="0 0 -.2980115" rpy="0 0 0"/>
+    <axis xyz="0 1 0" />
+    <limit effort="1000.0" lower="0" upper=".0559" velocity="0.0"/>
+  </joint>
+
+
+  <!-- link7_Fore_arm_connector  -->
+  <!-- This is joint 5 -->
+  <link name="joint5">
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link7_forearm_connector/FD22-58a.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link7_forearm_connector/FD22-58a.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link7_forearm_connector/McM_9374T100.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link7_forearm_connector/McM_9374T100.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link7_forearm_connector/McM_9374T100_sub_assembly.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link7_forearm_connector/McM_9374T100_sub_assembly.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link7_forearm_connector/McM_90945A740.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link7_forearm_connector/McM_90945A740.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link7_forearm_connector/McM_90945A740_sub_assembly.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link7_forearm_connector/McM_90945A740_sub_assembly.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link7_forearm_connector/McM_91294A193.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link7_forearm_connector/McM_91294A193.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link7_forearm_connector/McM_91830A402.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link7_forearm_connector/McM_91830A402.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link7_forearm_connector/McM_91830A402_sub_assembly.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link7_forearm_connector/McM_91830A402_sub_assembly.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+  </link>
+  <!-- joint5 -->
+  <joint name="joint5" type="revolute">
+    <parent link="LU_passive"/>
+    <child link="joint5"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" lower="0" upper="2.61799" velocity="0.0"/>
+    <safety_controller k_velocity="1" k_position="1"
+      soft_lower_limit="-3" soft_upper_limit="3" />
+  </joint>
+
+
+  <!-- link8_FOREARM_STRAP  -->
+  <!-- This is LF_passive... lengthy, aint it? -->
+  <link name="LF_passive">
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/FD22-0089.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/FD22-0089.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/50M31A_Plastic_JR3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/50M31A_Plastic_JR3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/FD22-0071a.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/FD22-0071a.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/FD22-0074.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/FD22-0074.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/FD22-0075.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/FD22-0075.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/FD22-0076a.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/FD22-0076a.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/FD22-0077.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/FD22-0077.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/FD22-0079b.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/FD22-0079b.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+   <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/FD22-0081.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/FD22-0081.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/FD22-0090.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/FD22-0090.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/FD22-0094.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/FD22-0094.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/Kaydon-54131001.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/Kaydon-54131001.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_9220A143.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_9220A143.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_9374T120.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_9374T120.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_9374T510.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_9374T510.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_90945A710.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_90945A710.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_90945A715.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_90945A715.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_90945A725.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_90945A725.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_90965A150.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_90965A150.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_91251A107.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_91251A107.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_91251A108.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_91251A108.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_91251A151.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_91251A151.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_91251A182.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_91251A182.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_91251A537.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_91251A537.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_91290A144.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_91290A144.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_91294A128.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_91294A128.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_93615A217.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_93615A217.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_97395A445.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_97395A445.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_98019A228.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/McM_98019A228.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/MOCK_A_1N_2-Y16030.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/MOCK_A_1N_2-Y16030.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/MOCK_A_1N_2-Y16076.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/MOCK_A_1N_2-Y16076.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/RH-8D-XX06-E.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/RH-8D-XX06-E.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/UPPER_CUFF.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link8_FOREARM_STRAP/UPPER_CUFF.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+  </link>
+  <!-- LF_passive -->
+  <joint name="LF_passive" type="fixed">
+    <parent link="joint5"/>
+    <child link="LF_passive"/>
+    <origin xyz="0 .330624 0" rpy="1.5708 1.5708 0"/>
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" lower="0" upper=".0969" velocity="0.0"/>
+  </joint>
+
+
+  <!-- link9_CIRCUMDUCTION  -->
+  <link name="joint6">
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link9_CIRCUMDUCTION/FD22-0062d.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link9_CIRCUMDUCTION/FD22-0062d.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link9_CIRCUMDUCTION/AY22-0074A.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link9_CIRCUMDUCTION/AY22-0074A.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link9_CIRCUMDUCTION/FD22-0096.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link9_CIRCUMDUCTION/FD22-0096.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link9_CIRCUMDUCTION/FD22-0097.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link9_CIRCUMDUCTION/FD22-0097.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link9_CIRCUMDUCTION/McM_90945A710.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link9_CIRCUMDUCTION/McM_90945A710.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link9_CIRCUMDUCTION/McM_91251A107.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link9_CIRCUMDUCTION/McM_91251A107.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link9_CIRCUMDUCTION/McM_93600A269.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link9_CIRCUMDUCTION/McM_93600A269.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link9_CIRCUMDUCTION/MOCK_RH-5A-XX02.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link9_CIRCUMDUCTION/MOCK_RH-5A-XX02.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link9_CIRCUMDUCTION/ServoCity_615404.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link9_CIRCUMDUCTION/ServoCity_615404.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link9_CIRCUMDUCTION/ST_SAA10Xx0.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+      <geometry>
+        <mesh filename="package://meshes/link9_CIRCUMDUCTION/ST_SAA10Xx0.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+  </link>
+  <!-- joint6 -->
+  <joint name="joint6" type="revolute">
+    <parent link="LF_passive"/>
+    <child link="joint6"/>
+    <origin xyz="0 0 0" rpy="0 0 1.5708"/>
+    <axis xyz="0 0 -1" />
+    <limit effort="1000.0" lower="0" upper="3.14159" velocity="0.0"/>
+    <safety_controller k_velocity="1" k_position="1"
+      soft_lower_limit="-3" soft_upper_limit="3" />
+  </joint>
+
+
+  <!-- link10_HAND  -->
+  <!-- This is joint7 -->
+  <link name="joint7">
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link10_HAND/FD22-0065c.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link10_HAND/FD22-0065c.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link10_HAND/AY22-0074A.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link10_HAND/AY22-0074A.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link10_HAND/FD22-0097.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link10_HAND/FD22-0097.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link10_HAND/McM_91251A107.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link10_HAND/McM_91251A107.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link10_HAND/McM_93600A269.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link10_HAND/McM_93600A269.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link10_HAND/MOCK_RH-5A-XX02.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link10_HAND/MOCK_RH-5A-XX02.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link10_HAND/ServoCity_615404.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link10_HAND/ServoCity_615404.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link10_HAND/ST_SAA10Xx0.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link10_HAND/ST_SAA10Xx0.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+  </link>
+  <!-- joint7 -->
+  <joint name="joint7" type="revolute">
+    <parent link="joint6"/>
+    <child link="joint7"/>
+    <origin xyz="0 0 0" rpy="1.5708 3.14159 0"/>
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" lower=".907571" upper="3.14159" velocity="0.0"/>
+    <safety_controller k_velocity="1" k_position="1"
+      soft_lower_limit="-3" soft_upper_limit="3" />
+  </joint>
+
+  <!-- link11_HAND_SLIDER  -->
+  <link name="joint8">
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link11_HAND_SLIDER/FD22-0091.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link11_HAND_SLIDER/FD22-0091.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link11_HAND_SLIDER/FD22-0096.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link11_HAND_SLIDER/FD22-0096.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link11_HAND_SLIDER/McM_90945A710.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link11_HAND_SLIDER/McM_90945A710.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link11_HAND_SLIDER/McM_91251A107.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link11_HAND_SLIDER/McM_91251A107.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+  </link>
+  <!-- joint8 -->
+  <joint name="joint8" type="revolute">
+    <parent link="joint7"/>
+    <child link="joint8"/>
+    <origin xyz=".005 0 0" rpy="1.5708 0 0"/>
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" lower="-.959931" upper=".610865" velocity="0.0"/>
+    <safety_controller k_velocity="1" k_position="1"
+      soft_lower_limit="-3" soft_upper_limit="3" />
+  </joint>
+
+
+  <!-- link12_Grip (needs to be named manip for DMU compatibility) -->
+  <!-- Manip! -->
+  <link name="manip">
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link12_grip/50M31A_Plastic_JR3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link12_grip/50M31A_Plastic_JR3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link12_grip/FD22-0092.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link12_grip/FD22-0092.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link12_grip/FD22-0093a.stl" scale="0.001 0.001 0.001"/>bbbbv   
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link12_grip/FD22-0093a.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link12_grip/McM_90965A150.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link12_grip/McM_90965A150.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link12_grip/McM_91290A144.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link12_grip/McM_91290A144.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link12_grip/McM_91830A208.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link12_grip/McM_91830A208.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link12_grip/MOCK_Handle.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://meshes/link12_grip/MOCK_Handle.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+  </link>
+  <!-- LH_passive -->
+  <joint name="LH_passive" type="fixed">
+    <parent link="joint8"/>
+    <child link="manip"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="-1 0 0" />
+    <limit effort="1000.0" lower="0" upper=".0537" velocity="0.0"/>
+  </joint>
+
+</robot>
