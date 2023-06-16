@@ -1,5 +1,0 @@
-  File "/home/romeperl/ssl_robot_challenge/install/launcher/lib/python3.10/site-packages/launcher/xacro_urdf.py", line 57
-    parameters=[{"robot_description": Parameter(Command(['xacro', urdf_model]), value_type=str)}]
-               
-SyntaxError: invalid syntax. Perhaps you forgot a comma?
-
