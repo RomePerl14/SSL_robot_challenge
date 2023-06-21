@@ -1,0 +1,4 @@
+bool add_robit
+string robot_name
+---
+bool robit_added

@@ -22,7 +22,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "xacro_urdf_viewer = launcher.xacro_urdf:main"
+            "xacro_urdf_viewer = launcher.xacro_urdf:main",
+            "kicker = launcher.kicker:main"
         ],
     },
 )

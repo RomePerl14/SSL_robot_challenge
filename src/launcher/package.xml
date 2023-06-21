@@ -12,6 +12,8 @@
   <depend>joint_state_publisher</depend>
   <depend>robot_state_publisher</depend>
   <depend>ros2launch</depend>
+  <depend>rclpy</depend>
+  <depend>bitchin_n_moanin</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
